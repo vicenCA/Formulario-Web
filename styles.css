@@ -1,0 +1,29 @@
+.titulo{
+    color: white;
+}
+
+#dniLabel{
+    display: none;
+}
+
+#rutLabel{
+    display: none;
+}
+
+#casillaNombre{
+    display: none;
+}
+
+#casillaDNI{
+    display: none;
+}
+
+#casillaRut{
+    display: none;
+}
+
+#datosEnviados{
+    color: green;
+    font-size: 17px;
+    text-align: center;
+}

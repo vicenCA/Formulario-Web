@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <title> Formulario Web </title>
+        <!-- META DATOS/ META TAGS -->
+        <meta charset= "utf-8">
+        <meta name = "viewport"     content = "width=device-width, initial-scale=1">
+        <meta name = "author"       content = "Vicente Cisternas">
+        <meta name = "description"  content = "formulario web que simula validaciones">
+        <meta name = "keywords"     content = "formulario, html">
+
+        <!-- CSS -->
+            <!-- BOOTSTRAP -->
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+            <!-- CSS STYLES -->
+                <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light" style="background-color: #4573B9;">
+            <h3 class="text-center titulo">Formulario Web</h3>
+        </nav>
+          <nav class="container-sm mt-5">
+              <nav class="row">
+                  <nav class="col-10">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>* Nombres</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Nombre">
+                                    <small id="casillaNombre" class="text-danger">
+                                        Debe ingresar al menos un nombre y un apellido
+                                      </small>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>* Apellidos</label>
+                                    <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellido Apellido">
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label>* Dirección de correo</label>
+                          <input type="email" class="form-control" id="email" placeholder="example@mail.com">
+                        </div>
+                        <!-- RADIO BUTTOM -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-check"> <!-- RADIO DNI -->
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="radioDNI" value="option1" onclick="mostrarDNI()">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      DNI
+                                    </label>
+                                </div>
+        
+                                <div class="form-group" id="dniLabel"> <!-- DNI LABEL -->
+                                    <label for="formGroupExampleInput">* Ingrese su DNI</label>
+                                    <input type="text" class="form-control" id="dni" placeholder="00000000A">
+                                    <small id="casillaDNI" class="text-danger">
+                                        Debe ingresar caracteres
+                                      </small>
+                                  </div>
+        
+                                <div class="form-check"> <!-- RADIO RUT -->
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick="mostrarRUT()">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      RUT
+                                    </label>
+                                </div>
+        
+                                <div class="form-group" id ="rutLabel";> <!--RUT LABEL -->
+                                    <label>* Ingrese su RUT</label>
+                                    <input type="text" class="form-control" id="rut" placeholder="11 111 111 1">
+                                    <small id="casillaRut" class="text-danger">
+                                        Debe ingresar solo números
+                                      </small>
+                                  </div>
+                            </div>
+                        </div>
+
+                        <!-- CHECK -->
+                        <div>
+                            <button type="button" class="btn btn-primary" id="mySubmit" onclick="submitFunction()">Submit</button>
+                            <button type="button" class="btn btn-warning" onclick="refresh()">Refresh</button>
+                        </div>
+                      </form>
+                        <p id="datosEnviados"></p>
+                  </nav>
+              </nav>
+          </nav>
+
+        <!-- JS -->
+            <script src="formulario.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    </body>
+</html>
